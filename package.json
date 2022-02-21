@@ -69,6 +69,23 @@
             ],
             "id": "credentials_path",
             "css": "col-md-12"
+          },
+          {
+            "type": "input",
+            "placeholder": "result",
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable",
+              "pr": "Atribuir resultado a variável"
+            },
+            "description": {
+              "es": "Nombre de la variable donde se asignará el resultado de la execución del comando.",
+              "en": "Name of the variable where the result of the execution of the command will be assigned.",
+              "pr": "Nome da variável onde será atribuído o resultado da execução do comando."
+            },
+            "remove_vars": true,
+            "id": "result",
+            "css": "col-md-12"
           }
         ]
       },
@@ -147,9 +164,9 @@
               "pr": "resultado"
             },
             "title": {
-              "en": "Variable name where to store the result of the command",
-              "es": "Nombre de la variable donde almacenar el resultado del comando",
-              "pr": "Nome da variavel onde armazenar o resultado do comando"
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable",
+              "pr": "Atribuir resultado a variável"
             },
             "description": {
               "en": "Variable name where to store the result of the command",
@@ -211,6 +228,11 @@
               "en": "{\"isAdmin\": True, \"recoveryEmail\": \"r2d2@gmail.com\"}",
               "es": "{\"isAdmin\": True, \"recoveryEmail\": \"r2d2@gmail.com\"}",
               "pr": "{\"isAdmin\": True, \"recoveryEmail\": \"r2d2@gmail.com\"}"
+            },
+            "help": {
+              "es": "OPCIONAL. Para más información de como completar este input, revisar documentación",
+              "en": "OPTIONAL. For more information about how to complete this input, check documentation",
+              "pr": "OPCIONAL. Para mais informacao de como completar este input, revisar documentacao"
             },
             "description": {
               "en": "Additional data to be added to the user. More info here: https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/insert",
@@ -379,6 +401,11 @@
               "en": "Additional data to be added to the user. More info here: https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/get",
               "es": "Datos adicionales a ser agregados al usuario. Mas información aquí: https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/get",
               "pr": "Dados adicionais a ser adicionados ao usuario. Mais informacao aqui: https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/get"
+            },
+            "help": {
+              "es": "OPCIONAL. Para más información de como completar este input, revisar documentación",
+              "en": "OPTIONAL. For more information about how to complete this input, check documentation",
+              "pr": "OPCIONAL. Para mais informacao de como completar este input, revisar documentacao"
             },
             "id": "other_params",
             "formatter": "json",
