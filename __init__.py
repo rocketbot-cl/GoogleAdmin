@@ -36,14 +36,11 @@ import json
 
 # Add the libs folder to the system path
 base_path = tmp_global_obj["basepath"] #type:ignore
-google_directory_path = os.path.join(base_path, "modules", "GoogleDirectory")
-gd_libs_path = os.path.join(cur_path, "libs") #type:ignore
+google_directory_path = os.path.join(base_path, "modules", "GoogleAdmin")
+gd_libs_path = os.path.join(google_directory_path, "libs") #type:ignore
 
 if gd_libs_path not in sys.path:
     sys.path.append(gd_libs_path)
-
-# Import module libraries
-from googleapiclient.errors import HttpError
 
 """
 The code of each module works as a local scope. Each command that is executed resets the data.
