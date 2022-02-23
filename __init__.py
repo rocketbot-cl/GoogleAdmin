@@ -190,9 +190,13 @@ try:
     if module == "delete":
         user_key = GetParams("user_key")
         google_directory = mod_google_directory[session]
-        response = google_directory.service.users().delete(userKey=user_key).execute()
-        if result:
-            SetVar(result, response)
+        try:
+            response = google_directory.service.users().delete(userKey=user_key).execute()
+            if result:
+                SetVar(result, True)
+        except:
+            if result:
+                SetVar(result, False)
 
     if module == "get_user":
         user_key = GetParams("user_key")
@@ -213,7 +217,6 @@ try:
         if result:
             SetVar(result, user)
         
-
 
 except Exception as e:
     PrintException()
