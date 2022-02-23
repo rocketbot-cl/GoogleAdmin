@@ -1,33 +1,3 @@
-## Como usar este módulo
-
-Para utilizar este módulo necesitas habilitar la API de Google Admin para tu cuenta. Para ello, debes seguir los siguientes pasos ( [referencia](https://developers.google.com/admin-sdk/directory/v1/quickstart/python) ):
-
-- Crear un projecto en Google Cloud Console (Saltar si ya tienes un proyecto creado)
-  - En el menú de la izquierda, dar click en Menu > IAM & Admin > Create a project
-
-  - En el campo Project Name, agregar un nombre para el proyecto
-
-  - Completar los siguientes campos según corresponda
-
-- Habilitar la API:
-    - Ir a [Google Cloud Console](https://console.cloud.google.com/)
-    - En el menú arriba a la derecha, dar click en **Menu** > **APIs & Services** > **Library**
-    - En el buscador, buscar **Admin SDK API**
-    - Dar click en el resultado **Admin SDK API**
-    -  Click en el botón **Habilitar**
-
-- Crear credenciales de Google:
-    - Ir a [Google Cloud Console](https://console.cloud.google.com/)
-    - En el menú arriba a la derecha, dar click en **Menu** > **APIs & Services** > **Credentials**
-    - Click en el botón **Create credentials**
-    - Click en **OAuth client ID**
-    - En el campo **Application type**, seleccionar **Desktop Application**
-    - Escribir un nombre en el campo **Name**
-    - Aparecerá una ventana con los datos de la credencial. Dar click en **Download JSON**
-    - Utilizar este archivo como credenciales en el módulo
-
----
-
 # How to use this module
 
 To use this module you need to configure the credentials to connect with the Google Admin API. To this, you need to follow the steps below:
@@ -55,3 +25,32 @@ To use this module you need to configure the credentials to connect with the Goo
     - Use this file as credentials in the module
 
 
+--- 
+
+## Como usar este módulo
+
+Para utilizar este módulo necesitas habilitar la API de Google Admin para tu cuenta. Para ello, debes seguir los siguientes pasos ( [referencia](https://developers.google.com/admin-sdk/directory/v1/quickstart/python) ):
+
+- Crear un projecto en Google Cloud Console (Saltar si ya tienes un proyecto creado)
+  - En el menú de la izquierda, dar click en Menu > IAM & Admin > Create a project
+
+  - En el campo Project Name, agregar un nombre para el proyecto
+
+  - Completar los siguientes campos según corresponda
+
+- Habilitar la API:
+    - Ir a [Google Cloud Console](https://console.cloud.google.com/)
+    - En el menú arriba a la derecha, dar click en **Menu** > **APIs & Services** > **Library**
+    - En el buscador, buscar **Admin SDK API**
+    - Dar click en el resultado **Admin SDK API**
+    -  Click en el botón **Habilitar**
+
+- Crear credenciales de Google:
+    - Ir a [Google Cloud Console](https://console.cloud.google.com/)
+    - En el menú arriba a la derecha, dar click en **Menu** > **APIs & Services** > **Credentials**
+    - Click en el botón **Create credentials**
+    - Click en **OAuth client ID**
+    - En el campo **Application type**, seleccionar **Desktop Application**
+    - Escribir un nombre en el campo **Name**
+    - Aparecerá una ventana con los datos de la credencial. Dar click en **Download JSON**
+    - Utilizar este archivo como credenciales en el módulo
