@@ -2,7 +2,7 @@
   
 Este módulo se conecta a la Api Directory de google. Puedes Crear, eliminar o restaurar la contraseña de un Usuario  
   
-![banner](docs/img/Banner_GoogleAdmin.jpg)
+![banner](img/Banner_GoogleAdmin.jpg)
 ## Como instalar este módulo
   
 __Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.  
