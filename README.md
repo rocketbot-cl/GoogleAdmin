@@ -50,6 +50,9 @@ Delete a user from Google Admin
 5. Get User  
 Get the information of a user from Google Admin  
 
+6. Update User
+Update the information of a user from Google Admin
+
 --- 
 ### OS
 
