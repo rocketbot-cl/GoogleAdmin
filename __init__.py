@@ -24,11 +24,9 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 
-try:
-    from queue import Queue, Empty
-except ImportError:
-    from Queue import Queue, Empty  # python 2.x
-
+GetParams = GetParams #type:ignore
+SetVar = SetVar #type:ignore
+PrintException = PrintException #type:ignore
 
 import os
 import sys
@@ -54,7 +52,7 @@ The syntax is {"session name": {data}}
 """
 SESSION_DEFAULT = "default"
 try:
-    if not mod_google_directory :
+    if not mod_google_directory : #type:ignore
         mod_google_directory = {SESSION_DEFAULT:{}}
 except NameError:
     mod_google_directory = {SESSION_DEFAULT:{}}
@@ -209,9 +207,18 @@ try:
 
     if module == "update":
         user_key = GetParams("user_key")
-        body = GetParams("body")
+        body = {}
+        email = GetParams("email")
+        password = GetParams("password")
 
         google_directory = mod_google_directory[session]
+        if email:
+            body["primaryEmail"] = email
+        if password:
+            body["password"] = password
+
+        body.update(other_params)
+
         user = google_directory.service.users().update(userKey=user_key, body=body).execute()
 
         if result:
