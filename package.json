@@ -1,8 +1,8 @@
 {
   "author": "Danilo Toro",
-  "description": "Este módulo de conecta a la Api Directory de google. Puedes Crear, eliminar o restaurar la contraseña de un Usuario| This module connects to the google Api Directory. You can create, delete or restore the password of a User.",
+  "description": "This module connects to the google Api Directory. You can create, delete or restore the password of a User | Este módulo de conecta a la Api Directory de google. Puedes Crear, eliminar o restaurar la contraseña de un Usuario",
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "homepage": "http://rocketbot.co/",
   "linux": true,
@@ -618,6 +618,147 @@
       "video_youtube": "",
       "icon": "data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmJiYjAwIiBkPSJNMTEzLjQ3LDMwOS40MDhMOTUuNjQ4LDM3NS45NGwtNjUuMTM5LDEuMzc4QzExLjA0MiwzNDEuMjExLDAsMjk5LjksMCwyNTYNCgljMC00Mi40NTEsMTAuMzI0LTgyLjQ4MywyOC42MjQtMTE3LjczMmgwLjAxNGw1Ny45OTIsMTAuNjMybDI1LjQwNCw1Ny42NDRjLTUuMzE3LDE1LjUwMS04LjIxNSwzMi4xNDEtOC4yMTUsNDkuNDU2DQoJQzEwMy44MjEsMjc0Ljc5MiwxMDcuMjI1LDI5Mi43OTcsMTEzLjQ3LDMwOS40MDh6Ii8+PHBhdGggZmlsbD0iIzUxOGVmOCIgZD0iTTUwNy41MjcsMjA4LjE3NkM1MTAuNDY3LDIyMy42NjIsNTEyLDIzOS42NTUsNTEyLDI1NmMwLDE4LjMyOC0xLjkyNywzNi4yMDYtNS41OTgsNTMuNDUxDQoJYy0xMi40NjIsNTguNjgzLTQ1LjAyNSwxMDkuOTI1LTkwLjEzNCwxNDYuMTg3bC0wLjAxNC0wLjAxNGwtNzMuMDQ0LTMuNzI3bC0xMC4zMzgtNjQuNTM1DQoJYzI5LjkzMi0xNy41NTQsNTMuMzI0LTQ1LjAyNSw2NS42NDYtNzcuOTExaC0xMzYuODlWMjA4LjE3NmgxMzguODg3TDUwNy41MjcsMjA4LjE3Nkw1MDcuNTI3LDIwOC4xNzZ6Ii8+PHBhdGggZmlsbD0iIzI4YjQ0NiIgZD0iTTQxNi4yNTMsNDU1LjYyNGwwLjAxNCwwLjAxNEMzNzIuMzk2LDQ5MC45MDEsMzE2LjY2Niw1MTIsMjU2LDUxMg0KCWMtOTcuNDkxLDAtMTgyLjI1Mi01NC40OTEtMjI1LjQ5MS0xMzQuNjgxbDgyLjk2MS02Ny45MWMyMS42MTksNTcuNjk4LDc3LjI3OCw5OC43NzEsMTQyLjUzLDk4Ljc3MQ0KCWMyOC4wNDcsMCw1NC4zMjMtNy41ODIsNzYuODctMjAuODE4TDQxNi4yNTMsNDU1LjYyNHoiLz48cGF0aCBmaWxsPSIjZjE0MzM2IiBkPSJNNDE5LjQwNCw1OC45MzZsLTgyLjkzMyw2Ny44OTZjLTIzLjMzNS0xNC41ODYtNTAuOTE5LTIzLjAxMi04MC40NzEtMjMuMDEyDQoJYy02Ni43MjksMC0xMjMuNDI5LDQyLjk1Ny0xNDMuOTY1LDEwMi43MjRsLTgzLjM5Ny02OC4yNzZoLTAuMDE0QzcxLjIzLDU2LjEyMywxNTcuMDYsMCwyNTYsMA0KCUMzMTguMTE1LDAsMzc1LjA2OCwyMi4xMjYsNDE5LjQwNCw1OC45MzZ6Ii8+PC9zdmc+",
       "module": "get_user",
+      "module_name": "GoogleAdmin",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "title": {
+        "en": "Update User",
+        "es": "Actualizar usuario",
+        "pr": "Atualizar usuário"
+      },
+      "description": {
+        "en": "Update the information of a user from Google Admin",
+        "es": "Actualizar la información de un usuario de Google Admin",
+        "pr": "Atualiza a informação de um usuário de Google Admin"
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "input",
+            "placeholder": {
+              "en": "111575529871886135722 or joe.bloggs@mail.com",
+              "es": "111575529871886135722 o juan.perez@mail.com",
+              "pr": "111575529871886135722 ou thiago.silva@mail.com"
+            },
+            "title": {
+              "en": "User Key",
+              "es": "Key de Usuario",
+              "pr": "Chave de Usuário"
+            },
+            "description": {
+              "en": "The user key can be the user's primary email address or the user's unique ID. List the users to know their user key",
+              "es": "El key de usuario puede ser el correo electrónico primario del usuario o su ID único. Listar los usuarios para conocer su key de usuario",
+              "pr": "A chave de usuário pode ser o endereço de e-mail primário do usuário ou o ID único do usuário. Listar os usuários para conhecer sua chave de usuário"
+            },
+            "help":{
+              "en": "String, Email or immutable ID of the user",
+              "es": "String, Email o ID inmutable del usuario",
+              "pr": "String, Email o ID inmutable do usuário"
+            },
+            "id": "user_key",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "en": "response",
+              "es": "resultado",
+              "pr": "resultado"
+            },
+            "title": {
+              "en": "Variable name where to store the result",
+              "es": "Nombre de la variable donde almacenar el resultado",
+              "pr": "Nome da variavel onde armazenar o resultado"
+            },
+            "description": {
+              "en": "Variable name where to store the result of the command",
+              "es": "Nombre de la variable donde almacenar el resultado del comando",
+              "pr": "Nome da variavel onde armazenar o resultado do comando"
+            },
+            "id": "result",
+            "remove_vars": true,
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "en": "joe.bloggs@mail.com",
+              "es": "juan.perez@mail.com",
+              "pr": "thiago.silva@mail.com"
+            },
+            "title": {
+              "en": "Email",
+              "es": "Correo",
+              "pr": "E-mail"
+            },
+            "description": {
+              "en": "Email of the user to be created",
+              "es": "Correo del usuario a crear",
+              "pr": "E-mail do usuario a ser criado"
+            },
+            "id": "email",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "en": "123456789",
+              "es": "123456789",
+              "pr": "123456789"
+            },
+            "title": {
+              "en": "Password",
+              "es": "Contraseña",
+              "pr": "Senha"
+            },
+            "description": {
+              "en": "Password of the user to be created. If not specified, a random password will be generated",
+              "es": "Contraseña del usuario a crear. Si no se especifica, se generará una contraseña aleatoria",
+              "pr": "Senha do usuario a ser criado. Se nao especificado, uma senha aleatoria sera gerada"
+            },
+            "id": "password",
+            "css": "col-md-6"
+          },
+          {
+            "type": "textarea",
+            "title": {
+              "en": "Aditional data",
+              "es": "Datos adicionales",
+              "pr": "Dados adicionais"
+            },
+            "placeholder": {
+              "en": "{\"viewType\": \"domain_public\", ...}",
+              "es": "{\"viewType\": \"domain_public\", ...}",
+              "pr": "{\"viewType\": \"domain_public\", ...}"
+            },
+            "description": {
+              "en": "Additional data to be sent along with the request. More info: https://developers.google.com/admin-sdk/directory/v1/reference/users/get",
+              "es": "Datos adicionales a ser enviados junto con la solicitud. Más información: https://developers.google.com/admin-sdk/directory/v1/reference/users/get",
+              "pr": "Dados adicionais a ser enviados junto com a solicitação. Mais informação: https://developers.google.com/admin-sdk/directory/v1/reference/users/get"
+            },
+            "help": {
+              "en": "You can add aditional data. For example, you can add the view type to get only public users. More info here: https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/get",
+              "es": "Puedes agregar información adicional. Por ejemplo, Puedes agregar el tipo de vista para obtener solo usuarios públicos. Más información aquí: https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/get",
+              "pr": "Você pode adicionar informação adicional. Por exemplo, você pode adicionar o tipo de visualização para obter apenas usuários públicos. Mais informação aqui: https://developers.google.com/resources/api-libraries/documentation/admin/directory_v1/python/latest/admin_directory_v1.users.html#get"
+            },
+            "id": "other_params",
+            "formatter": "json",
+            "css": "col-md-12"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmJiYjAwIiBkPSJNMTEzLjQ3LDMwOS40MDhMOTUuNjQ4LDM3NS45NGwtNjUuMTM5LDEuMzc4QzExLjA0MiwzNDEuMjExLDAsMjk5LjksMCwyNTYNCgljMC00Mi40NTEsMTAuMzI0LTgyLjQ4MywyOC42MjQtMTE3LjczMmgwLjAxNGw1Ny45OTIsMTAuNjMybDI1LjQwNCw1Ny42NDRjLTUuMzE3LDE1LjUwMS04LjIxNSwzMi4xNDEtOC4yMTUsNDkuNDU2DQoJQzEwMy44MjEsMjc0Ljc5MiwxMDcuMjI1LDI5Mi43OTcsMTEzLjQ3LDMwOS40MDh6Ii8+PHBhdGggZmlsbD0iIzUxOGVmOCIgZD0iTTUwNy41MjcsMjA4LjE3NkM1MTAuNDY3LDIyMy42NjIsNTEyLDIzOS42NTUsNTEyLDI1NmMwLDE4LjMyOC0xLjkyNywzNi4yMDYtNS41OTgsNTMuNDUxDQoJYy0xMi40NjIsNTguNjgzLTQ1LjAyNSwxMDkuOTI1LTkwLjEzNCwxNDYuMTg3bC0wLjAxNC0wLjAxNGwtNzMuMDQ0LTMuNzI3bC0xMC4zMzgtNjQuNTM1DQoJYzI5LjkzMi0xNy41NTQsNTMuMzI0LTQ1LjAyNSw2NS42NDYtNzcuOTExaC0xMzYuODlWMjA4LjE3NmgxMzguODg3TDUwNy41MjcsMjA4LjE3Nkw1MDcuNTI3LDIwOC4xNzZ6Ii8+PHBhdGggZmlsbD0iIzI4YjQ0NiIgZD0iTTQxNi4yNTMsNDU1LjYyNGwwLjAxNCwwLjAxNEMzNzIuMzk2LDQ5MC45MDEsMzE2LjY2Niw1MTIsMjU2LDUxMg0KCWMtOTcuNDkxLDAtMTgyLjI1Mi01NC40OTEtMjI1LjQ5MS0xMzQuNjgxbDgyLjk2MS02Ny45MWMyMS42MTksNTcuNjk4LDc3LjI3OCw5OC43NzEsMTQyLjUzLDk4Ljc3MQ0KCWMyOC4wNDcsMCw1NC4zMjMtNy41ODIsNzYuODctMjAuODE4TDQxNi4yNTMsNDU1LjYyNHoiLz48cGF0aCBmaWxsPSIjZjE0MzM2IiBkPSJNNDE5LjQwNCw1OC45MzZsLTgyLjkzMyw2Ny44OTZjLTIzLjMzNS0xNC41ODYtNTAuOTE5LTIzLjAxMi04MC40NzEtMjMuMDEyDQoJYy02Ni43MjksMC0xMjMuNDI5LDQyLjk1Ny0xNDMuOTY1LDEwMi43MjRsLTgzLjM5Ny02OC4yNzZoLTAuMDE0QzcxLjIzLDU2LjEyMywxNTcuMDYsMCwyNTYsMA0KCUMzMTguMTE1LDAsMzc1LjA2OCwyMi4xMjYsNDE5LjQwNCw1OC45MzZ6Ii8+PC9zdmc+",
+      "module": "update",
       "module_name": "GoogleAdmin",
       "visible": true,
       "options": false,

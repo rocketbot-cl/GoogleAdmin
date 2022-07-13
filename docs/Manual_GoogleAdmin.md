@@ -2,7 +2,7 @@
   
 Este módulo se conecta a la Api Directory de google. Puedes Crear, eliminar o restaurar la contraseña de un Usuario  
   
-![banner](docs/img/Banner_GoogleAdmin.jpg)
+![banner](img/Banner_GoogleAdmin.jpg)
 ## Como instalar este módulo
   
 __Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.  
@@ -88,3 +88,14 @@ Obtener la información de un usuario de Google Admin
 |Key de Usuario|El key de usuario puede ser el correo electrónico primario del usuario o su ID único. Listar los usuarios para conocer su key de usuario|111575529871886135722 o juan.perez@mail.com|
 |Nombre de la variable donde almacenar el resultado|Nombre de la variable donde almacenar el resultado del comando|resultado|
 |Datos adicionales|Datos adicionales a ser enviados junto con la solicitud. Más información [aquí](https//developers.google.com/admin-sdk/directory/v1/reference/users/get) |{"viewType": "domain_public", ...}|
+
+### Actualizar usuario
+
+Actualizar la información de un usuario de Google Admin
+|Parámetros|Descripción|ejemplo|
+| --- | --- | --- |
+|Key de Usuario|El key de usuario puede ser el correo electrónico primario del usuario o su ID único. Listar los usuarios para conocer su key de usuario|111575529871886135722 o
+|Nombre de la variable donde almacenar el resultado|Nombre de la variable donde almacenar el resultado del comando|resultado|
+|Correo|Nuevo correo del usuario. Si no se especifica no se actualizará|juan.perez@mail.com|
+|Contraseña|Nueva contraseña del ususaro. Si no se especifica, no se actualizará
+|Datos adicionales|Datos adicionales a ser enviados junto con la solicitud. Más información [aquí](https//developers.google.com/admin-sdk/directory/v1/reference/users/update) |{"viewType": "domain_public", ...}|
