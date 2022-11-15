@@ -1,101 +1,101 @@
+
+
+
+
 # Google Admin
   
-Este módulo se conecta a la Api Directory de google. Puedes Crear, eliminar o restaurar la contraseña de un Usuario  
+This module connects to the google Api Directory. You can create, delete or restore the password of a User.
   
-![banner](img/Banner_GoogleAdmin.jpg)
-## Como instalar este módulo
+![banner](imgs/Banner_GoogleAdmin.jpg)
+## How to install this module
   
-__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.  
+__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
 
-## Como usar este módulo
+# How to use this module
 
-Para utilizar este módulo necesitas habilitar la API de Google Admin para tu cuenta. Para ello, debes seguir los siguientes pasos ( [referencia](https://developers.google.com/admin-sdk/directory/v1/quickstart/python) ):
+To use this module you need to configure the credentials to connect with the Google Admin API. To this, you need to follow the steps below ( [reference](https://developers.google.com/admin-sdk/directory/v1/quickstart/python) )::
 
-- Crear un projecto en Google Cloud Console (Saltar si ya tienes un proyecto creado)
-  - En el menú de la izquierda, dar click en Menu > IAM & Admin > Create a project
+- Create a new project in Google Cloud Console (Skip if you already have a project created)
+    - At the top-left, click **Menu** > **IAM & Admin** > **Create a Project**.
+    - In the **Project Name** field, enter a descriptive name for your project.
+    - Complete the other steps with your information
 
-  - En el campo Project Name, agregar un nombre para el proyecto
+- Enable API
+    - Go to [Google Cloud Console](https://console.cloud.google.com/)
+    - At the top-left, click **Menu** > **APIs & Services** > **Library**
+    - In the browser field, enter **Admin SDK API**
+    - Click in the result **Admin SDK API**
+    - Click **Enable**
 
-  - Completar los siguientes campos según corresponda
-
-- Habilitar la API:
-    - Ir a [Google Cloud Console](https://console.cloud.google.com/)
-    - En el menú arriba a la derecha, dar click en **Menu** > **APIs & Services** > **Library**
-    - En el buscador, buscar **Admin SDK API**
-    - Dar click en el resultado **Admin SDK API**
-    -  Click en el botón **Habilitar**
-
-- Crear credenciales de Google:
-    - Ir a [Google Cloud Console](https://console.cloud.google.com/)
-    - En el menú arriba a la derecha, dar click en **Menu** > **APIs & Services** > **Credentials**
-    - Click en el botón **Create credentials**
-    - Click en **OAuth client ID**
-    - En el campo **Application type**, seleccionar **Desktop Application**
-    - Escribir un nombre en el campo **Name**
-    - Aparecerá una ventana con los datos de la credencial. Dar click en **Download JSON**
-    - Utilizar este archivo como credenciales en el módulo
+- Create Credentials
+    - Go to [Google Cloud Console](https://console.cloud.google.com/)
+    - At the top-left, click **Menu** > **APIs & Services** > **Credentials**
+    - Click **Create credentials**
+    - Click **OAuth client ID**
+    - In the **Application type** field, select **Desktop Application**
+    - In the **Name** field, enter a descriptive name for the credentials
+    - Appears a window with the credentials data. Click **Download JSON**
+    - Use this file as credentials in the module
 
 
+## Description of the commands
 
-## Descripción de los comandos
-
-### Configurar credenciales G-Suite
+### Setup G-Suite credentials
   
-Configura credenciales para conectar con el API de Google Admin.
-|Parámetros|Descripción|ejemplo|
+Configure credentials to connect with the Google Admin API.
+|Parameters|Description|example|
 | --- | --- | --- |
-|Ruta archivo de credenciales|Archivo json con las credenciales de acceso a la API de Google Admin. Revisar la documentación para obtener más información.|C:\Usuario\Desktop\credenciales.json|
+|Credentials file path|JSON file with the credentials to access the Google Admin API. See the documentation for more information.|C:\User\Desktop\credentials.json|
+|Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|
 
-### Crear un nuevo usuario
+### Create a new user
   
-Este comando crea un nuevo usuario en el directorio de google. El usuario será creado con el email y contraseña 
-especificados.
-|Parámetros|Descripción|ejemplo|
+This command creates a new user in the Google Admin. The user will be created with the specified email and password.
+|Parameters|Description|example|
 | --- | --- | --- |
-|Nombre|Nombre del usuario a crear|Juan|
-|Apellido|Apellido del usuario a crear|Perez|
-|Nombre de la variable donde almacenar el resultado del comando|Nombre de la variable donde almacenar el resultado del comando|resultado|
-|Correo|Correo del usuario a crear|juan.perez@mail.com|
-|Contraseña|Contraseña del usuario a crear. Si no se especifica, se generará una contraseña aleatoria|123456789|
-|Datos adicionales|Datos adicionales a ser agregados al usuario. Mas información [aquí](https//developers.google.com/admin-sdk/directory/reference/rest/v1/users/insert)|{"isAdmin": True, "recoveryEmail": "r2d2@gmail.com"}|
+|First name|First name of the user to be created|Joe|
+|Last name|Last name of the user to be created|Bloggs|
+|Assign result to variable|Variable name where to store the result of the command|response|
+|Email|Email of the user to be created|joe.bloggs@mail.com|
+|Password|Password of the user to be created. If not specified, a random password will be generated|123456789|
+|Aditional data|Additional data to be added to the user. More info here https//developers.google.com/admin-sdk/directory/reference/rest/v1/users/insert|{"isAdmin": True, "recoveryEmail": "r2d2@gmail.com"}|
 
-### Obtener usuarios
+### Get users
   
-Obtener usuarios de Google. Puedes añadir un filtro para obtener solo usuarios con un dominio de correo electrónico 
-específico.
-|Parámetros|Descripción|ejemplo|
+Get users from Google. You can add a filter to get only users with a specific email domain.
+|Parameters|Description|example|
 | --- | --- | --- |
-|Dominio (opcional)|Filtrar usuarios por dominio de correo electrónico.|@rocketbot.com|
-|Nombre de la variable donde almacenar el resultado del comando|Nombre de la variable donde almacenar el resultado del comando|resultado|
-|Ordenar por (opcional)|Ordenar usuarios por este campo. Si no seleccionas ningún campo, los usuarios se ordenarán por email.|email|
-|Ascendente o Descendente|Ordenar usuarios de forma ascendente o descendente.|ASCENDING|
-|Datos adicionales|Datos adicionales a ser agregados al usuario. Mas información [aquí](https//developers.google.com/admin-sdk/directory/reference/rest/v1/users/get) |{"maxResults": 10, "viewType": "domain_public", ...}|
+|Domain (optional)|Filter users by email domain.|@rocketbot.com|
+|Variable name where to store the result of the command|Variable name where to store the result of the command|response|
+|Order by (optional)|Order users by this field. If not selected, the users will be ordered by email.|email|
+|Acending or Descending|Sort users in ascending or descending order.|ASCENDING|
+|Aditional data|Additional data to be added to the user. More info here https//developers.google.com/admin-sdk/directory/reference/rest/v1/users/list|{"maxResults": 10, "viewType": "domain_public", ...}|
 
-### Borrar usuario
+### Delete User
   
-Borrar un usuario de Google Admin
-|Parámetros|Descripción|ejemplo|
+Delete a user from Google Admin
+|Parameters|Description|example|
 | --- | --- | --- |
-|Key de Usuario|Key de Usuario o Email Address del usuario a ser borrado|111575529871886135722 o juan.perez@mail.com|
-|Nombre de la variable donde almacenar el resultado|Nombre de la variable donde almacenar el resultado del comando|resultado|
-|Datos adicionales|Datos adicionales a ser enviados a la API. Mas info [aquí](https//developers.google.com/admin-sdk/directory/v1/reference/users/delete)|{"viewType": "domain_public", ...}|
+|User Key|User Key or Email Address of the user to be deleted|111575529871886135722 or joe.bloggs@mail.com|
+|Variable name where to store the result|Variable name where to store the result of the command|response|
+|Aditional data|Aditional data to be sent to the API. More info https//developers.google.com/admin-sdk/directory/reference/rest/v1/users/delete|{"viewType": "domain_public", ...}|
 
-### Obtener usuario
+### Get User
   
-Obtener la información de un usuario de Google Admin
-|Parámetros|Descripción|ejemplo|
+Get the information of a user from Google Admin
+|Parameters|Description|example|
 | --- | --- | --- |
-|Key de Usuario|El key de usuario puede ser el correo electrónico primario del usuario o su ID único. Listar los usuarios para conocer su key de usuario|111575529871886135722 o juan.perez@mail.com|
-|Nombre de la variable donde almacenar el resultado|Nombre de la variable donde almacenar el resultado del comando|resultado|
-|Datos adicionales|Datos adicionales a ser enviados junto con la solicitud. Más información [aquí](https//developers.google.com/admin-sdk/directory/v1/reference/users/get) |{"viewType": "domain_public", ...}|
+|User Key|The user key can be the user's primary email address or the user's unique ID. List the users to know their user key|111575529871886135722 or joe.bloggs@mail.com|
+|Variable name where to store the result|Variable name where to store the result of the command|response|
+|Aditional data|Additional data to be sent along with the request. More info https//developers.google.com/admin-sdk/directory/reference/rest/v1/users/get|{"viewType": "domain_public", ...}|
 
-### Actualizar usuario
-
-Actualizar la información de un usuario de Google Admin
-|Parámetros|Descripción|ejemplo|
+### Update User
+  
+Update the information of a user from Google Admin
+|Parameters|Description|example|
 | --- | --- | --- |
-|Key de Usuario|El key de usuario puede ser el correo electrónico primario del usuario o su ID único. Listar los usuarios para conocer su key de usuario|111575529871886135722 o
-|Nombre de la variable donde almacenar el resultado|Nombre de la variable donde almacenar el resultado del comando|resultado|
-|Correo|Nuevo correo del usuario. Si no se especifica no se actualizará|juan.perez@mail.com|
-|Contraseña|Nueva contraseña del ususaro. Si no se especifica, no se actualizará
-|Datos adicionales|Datos adicionales a ser enviados junto con la solicitud. Más información [aquí](https//developers.google.com/admin-sdk/directory/v1/reference/users/update) |{"viewType": "domain_public", ...}|
+|User Key|The user key can be the user's primary email address or the user's unique ID. List the users to know their user key|111575529871886135722 or joe.bloggs@mail.com|
+|Variable name where to store the result|Variable name where to store the result of the command|response|
+|Email|Email of the user to be created|joe.bloggs@mail.com|
+|Password|Password of the user to be created. If not specified, a random password will be generated|123456789|
+|Aditional data|Additional data to be sent along with the request. More info https//developers.google.com/admin-sdk/directory/reference/rest/v1/users/patch|{"viewType": "domain_public", ...}|
