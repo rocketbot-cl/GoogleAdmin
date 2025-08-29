@@ -1,7 +1,3 @@
-
-
-
-
 # Google Admin
   
 This module connects to the google Api Directory. You can create, delete or restore the password of a User.
